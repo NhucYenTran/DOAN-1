@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh cuộn ngang</title>
+    <style>
+        .scroll-container {
+            width: 300px; /* Chiều rộng của khung chứa */
+            overflow-x: auto; /* Cho phép cuộn ngang */
+            white-space: nowrap; /* Không tự động xuống dòng */
+            border: 1px solid #000; /* Đường viền để dễ thấy */
+        }
+        .scroll-content {
+            width: 600px; /* Chiều rộng của nội dung để kích hoạt cuộn ngang */
+            height: 100px; /* Chiều cao của nội dung */
+            background-color: #f0f0f0; /* Màu nền của nội dung */
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="scroll-content">
+            <!-- Nội dung dài để cuộn ngang -->
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+    </div>
+</body>
+</html>
