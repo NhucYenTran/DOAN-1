@@ -57,7 +57,12 @@ html{
     background-color: var(--background-btn);
     color: white;
     border: none;
+    cursor: pointer;
 }
+.search-form__btn:hover{
+    opacity: 0.9;
+}
+
 .search-form__option{
     border-top: 2px solid var(--background-Gray);
 }
@@ -79,6 +84,7 @@ html{
     max-height: 90%;
     width: 100%;
     overflow: auto;
+    /* overflow-y: scroll; */
     position: relative;
 }
 table{
@@ -124,4 +130,5 @@ tr:nth-child(even) {
     border: none;
     background-color: var(--background-btn);
     color: white;
+    cursor: pointer;
 }

@@ -6,32 +6,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <script src="main2.js" defer></script>
+    <script src="main3.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
     <div class="box">
         <div class="search-container">
-            <form class="search-form">
+            <div class="search-form">
                 <div class="search-form__main">
                     <div class="search-form__field">
                         <label for="" class="search-form__label">Ngành:</label>  
-                        <select class="search-form__input" name="" id="">
+                        <select class="search-form__input" name="" id="nganh">
                             <option value="">-- Ngành học</option>
-                            <option value="">CNTT</option>
-                            <option value="">KHMT</option>
-                            <option value="">KTPM</option>
+                            <option value="0">CNTT</option>
+                            <option value="1">KHMT</option>
+                            <option value="2">KTPM</option>
                         </select>
                     </div>
 
                     <div class="search-form__field">
                         <label for="" class="search-form__label">MSSV:</label>
-                        <input type="text" class="search-form__input">
+                        <input type="text" class="search-form__input" id="mssv" >
                     </div>
 
                     <div class="search-form__field">
                         <label for="" class="search-form__label">CCCD:</label>
-                        <input type="text" class="search-form__input">
+                        <input type="text" class="search-form__input" id="cccd">
                     </div>
 
                     <div class="search-form__field">
@@ -57,7 +58,7 @@
                     </div>
                 </div>
 
-            </form>
+            </div>
         </div>
         <!--  -->
         <div class="result-container">
@@ -70,11 +71,13 @@
                                 <th>CCCD</th>
                                 <th>Họ và tên</th>
                                 <th>Ngày sinh</th>
+                                <th>Ngành</th>
                                 <th>Giới tính</th>
                                 <th>Địa chỉ</th>
                             </tr>
                         </thead>
                     <tbody>
+              
               
                     </tbody>
                 </table>

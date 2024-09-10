@@ -1,27 +1,3 @@
-function addRow(class_table,class_tbody){
-    let table = document.querySelector(class_table)
-    let tbody = table.querySelector(class_tbody);
-    
-    let data = [
-        0,
-        'KHMT',
-        '123456789',
-        'Tran Van A',
-        '2-2-2004',
-        'Nam',
-        'Nguyen Van CU,An Hoa,Ninh Kieu,Can Tho '
-    ]
-    
-    for (let i = 1; i < 100 ; i++) {
-        let newRow = tbody.insertRow();
-        for (let j = 0; j < 7; j++) {
-            newRow.insertCell(j).innerHTML = data[j] + i
-        }
-    
-    }
-}
-addRow('table','tbody')
-
 let search__input = document.querySelectorAll('.search-form__input');
 let search__label = document.querySelectorAll('.search-form__label');
 
@@ -33,5 +9,45 @@ for (let i = 0; i < search__input.length; i++) {
         search__label[i].style.color = '';
     }
 }
+// 
+let nganh = document.getElementById('nganh')
+let mssv = document.getElementById('mssv')
+let cccd = document.getElementById('cccd')
+let btn = document.querySelector('.search-form__btn')
 
-console.log(search__input.length)
+btn.onclick = function(){
+    let arrnganh = ['CNTT','KHMT','KTPM']
+
+    console.log(nganh.value)
+    let search = data.filter(element =>{
+        if (mssv.value.trim() === '' && cccd.value.trim() === ''){
+            return arrnganh[nganh.value] === element.nganh
+
+        }
+        else if (cccd.value.trim() === '') {
+            nganh.value = ''
+            return mssv.value === element.mssv
+        }
+        else if (mssv.value.trim() === '') {
+            nganh.value = ''
+            return cccd.value === element.cccd
+        }
+        else{
+            nganh.value = ''
+            return mssv.value === element.mssv && cccd.value === element.cccd
+
+        }
+
+
+    })
+    addRowsToTable(search)
+ 
+}
+
+
+
+
+
+
+
+
